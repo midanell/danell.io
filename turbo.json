@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": [
+    "NEXT_PUBLIC_\\*",
+    "SANITY_PERSPECTIVE",
+    "SANITY_API_READ_TOKEN",
+    "REVALIDATE_INTERVAL",
+    "NODE_ENV"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "env": [
+        "SANITY_PERSPECTIVE",
+        "SANITY_API_READ_TOKEN",
+        "REVALIDATE_INTERVAL",
+        "NODE_ENV"
+      ],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "dev": {
+      "cache": true,
+      "persistent": true
+    }
+  }
+}

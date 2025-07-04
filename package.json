@@ -1,0 +1,29 @@
+{
+  "name": "danell.io",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "typegen": "turbo typegen"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "packageManager": "npm@10.1.0",
+  "engines": {
+    "node": ">=20.0",
+    "npm": ">=10"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1",
+    "eslint": "^9.28",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.4",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.12"
+  }
+}
