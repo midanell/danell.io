@@ -13,6 +13,16 @@
  */
 
 // Source: schema.json
+export type Impressum = {
+  _id: string;
+  _type: "impressum";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  description: string;
+};
+
 export type Home = {
   _id: string;
   _type: "home";
@@ -151,6 +161,7 @@ export type SanityAssetSourceData = {
 };
 
 export type AllSanitySchemaTypes =
+  | Impressum
   | Home
   | MediaTag
   | SanityImagePaletteSwatch

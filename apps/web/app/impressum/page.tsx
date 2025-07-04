@@ -1,11 +1,11 @@
-import { HOME_PAGE_QUERY } from "@/sanity/queries";
-import type { Home } from "@/sanity/sanity-schema";
+import { IMPRESSUM_PAGE_QUERY } from "@/sanity/queries";
+import type { Impressum } from "@/sanity/sanity-schema";
 import { REVALIDATE } from "@/sanity/server/env";
 import { sanityFetch } from "@/sanity/server/fetch";
 
-export default async function HomePage() {
-  const data = await sanityFetch<Home>({
-    query: HOME_PAGE_QUERY,
+export default async function ImpressumPage() {
+  const data = await sanityFetch<Impressum>({
+    query: IMPRESSUM_PAGE_QUERY,
     revalidate: REVALIDATE,
   });
   return (

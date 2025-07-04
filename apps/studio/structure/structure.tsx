@@ -2,9 +2,10 @@ import { StructureResolver } from "sanity/structure";
 import { DocumentIcon } from "@sanity/icons";
 import { createListItems } from "./utils/listHelpers";
 import home from "../schemaTypes/pages/home";
+import impressum from "../schemaTypes/pages/impressum";
 
 export const structure: StructureResolver = (S) => {
-  const itemsPages = createListItems([home], S);
+  const itemsPages = createListItems([home, impressum], S);
   const pages = S.listItem()
     .icon(DocumentIcon)
     .title("Pages")
