@@ -16,7 +16,7 @@ export default defineConfig({
     structureTool({
       structure,
     }),
-    visionTool(),
+    visionTool({ defaultApiVersion: process.env.SANITY_STUDIO_API_VERSION || "2025-07-04" }),
     media(),
   ],
 
