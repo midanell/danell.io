@@ -55,7 +55,7 @@ body {
   }
 
   .portable strong {
-    @apply font-medium text-inherit;
+    @apply font-bold text-inherit;
   }
 
   .portable h3,

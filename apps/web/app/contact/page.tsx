@@ -40,7 +40,6 @@ export default async function ContactPage() {
         <p>{data.vcard.title}</p>
         <p>{data.vcard.email}</p>
         <p>{data.vcard.phone}</p>
-        <p>{data.vcard.website}</p>
       </div>
       {showVCard && <Image src={vcard} alt="VCard" width={200} height={200} />}
     </div>

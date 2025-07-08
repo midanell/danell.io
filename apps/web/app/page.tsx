@@ -3,9 +3,11 @@ import type { Home } from "@/sanity/sanity-schema";
 import { REVALIDATE } from "@/sanity/server/env";
 import { sanityFetch } from "@/sanity/server/fetch";
 import Error from "@/ui/error";
+import PortableText from "@/ui/portableText";
 import { createMetadata, type SanitySeo } from "@/utils/metaData";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight } from "react-feather";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await sanityFetch<SanitySeo>({
@@ -29,8 +31,16 @@ export default async function HomePage() {
     <div className="flex flex-col items-center justify-items-center gap-8 p-8 pb-20">
       <h1>{data.title}</h1>
       <p>{data.description}</p>
-      <Link href={data.contactLink}>{data.contactLinkText}</Link>
+      <div>
+        <PortableText value={data.copy} />
+      </div>
       <p>{data.contactLinkDescription}</p>
+      <Link
+        href={data.contactLink}
+        className="flex items-center gap-2 rounded-full border px-6 py-4"
+      >
+        {data.contactLinkText} <ArrowRight />
+      </Link>
     </div>
   );
 }
