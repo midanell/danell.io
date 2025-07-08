@@ -29,10 +29,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col antialiased`}>
+        <header className="flex items-center justify-center p-4">Danell.IO</header>
         <main>{children}</main>
         <footer className="sticky bottom-0 flex w-full items-center justify-center gap-4 bg-white p-8">
           <Link href="/">Home</Link>
           <Link href="/impressum">Imprint</Link>
+          <Link href="/contact">Contact</Link>
         </footer>
       </body>
     </html>

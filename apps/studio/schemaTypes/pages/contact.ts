@@ -5,7 +5,6 @@ export default defineType({
   name: "contact",
   title: "Contact",
   type: "document",
-
   groups: [
     seoGroup,
     {

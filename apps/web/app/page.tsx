@@ -26,7 +26,7 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-items-center gap-16 p-8 pb-20">
+    <div className="flex flex-col items-center justify-items-center gap-8 p-8 pb-20">
       <h1>{data.title}</h1>
       <p>{data.description}</p>
       <Link href={data.contactLink}>{data.contactLinkText}</Link>
