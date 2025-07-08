@@ -30,6 +30,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "copy",
+      title: "Copy",
+      type: "blockText",
+      group: "page",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       title: "Contact button label",
       type: "string",
       name: "contactLinkText",

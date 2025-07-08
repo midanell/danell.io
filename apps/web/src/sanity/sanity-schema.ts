@@ -140,6 +140,7 @@ export type Home = {
   synonyms?: string;
   title: string;
   description: string;
+  copy: BlockText;
   contactLinkText: string;
   contactLink: string;
   contactLinkDescription: string;
