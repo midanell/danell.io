@@ -2,6 +2,7 @@ import { IMPRESSUM_PAGE_QUERY, IMPRESSUM_PAGE_SEO_QUERY } from "@/sanity/queries
 import type { Impressum } from "@/sanity/sanity-schema";
 import { REVALIDATE } from "@/sanity/server/env";
 import { sanityFetch } from "@/sanity/server/fetch";
+import Error from "@/ui/error";
 import { createMetadata, type SanitySeo } from "@/utils/metaData";
 import type { Metadata } from "next";
 
@@ -19,10 +20,14 @@ export default async function ImpressumPage() {
     query: IMPRESSUM_PAGE_QUERY,
     revalidate: REVALIDATE,
   });
+  if (!data) {
+    return <Error />;
+  }
+
   return (
     <div className="flex flex-col items-center justify-items-center gap-16 p-8 pb-20">
-      <h1>{data?.title}</h1>
-      <p>{data?.description}</p>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
     </div>
   );
 }

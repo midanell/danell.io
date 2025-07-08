@@ -2,8 +2,10 @@ import { HOME_PAGE_QUERY, HOME_PAGE_SEO_QUERY } from "@/sanity/queries";
 import type { Home } from "@/sanity/sanity-schema";
 import { REVALIDATE } from "@/sanity/server/env";
 import { sanityFetch } from "@/sanity/server/fetch";
+import Error from "@/ui/error";
 import { createMetadata, type SanitySeo } from "@/utils/metaData";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await sanityFetch<SanitySeo>({
@@ -19,10 +21,16 @@ export default async function HomePage() {
     query: HOME_PAGE_QUERY,
     revalidate: REVALIDATE,
   });
+  if (!data) {
+    return <Error />;
+  }
+
   return (
     <div className="flex flex-col items-center justify-items-center gap-16 p-8 pb-20">
-      <h1>{data?.title}</h1>
-      <p>{data?.description}</p>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+      <Link href={data.contactLink}>{data.contactLinkText}</Link>
+      <p>{data.contactLinkDescription}</p>
     </div>
   );
 }
