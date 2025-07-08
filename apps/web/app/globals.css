@@ -58,8 +58,9 @@ body {
     @apply font-medium text-inherit;
   }
 
-  .portable h3 {
-    @apply mt-8;
+  .portable h3,
+  .portable h2 {
+    @apply mt-6;
   }
 
   .portable ul {

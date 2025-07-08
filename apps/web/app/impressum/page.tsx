@@ -29,7 +29,7 @@ export default async function ImpressumPage() {
     <div className="flex flex-col items-center justify-items-center gap-8 p-8 pb-20">
       <h1>{data.title}</h1>
       <div>
-        <PortableText value={data.imprint} className="flex flex-col gap-4" />
+        <PortableText value={data.imprint} />
       </div>
     </div>
   );
