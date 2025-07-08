@@ -31,10 +31,13 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col antialiased`}>
         <header className="flex items-center justify-center p-4">Danell.IO</header>
         <main>{children}</main>
-        <footer className="sticky bottom-0 flex w-full items-center justify-center gap-4 bg-white p-8">
-          <Link href="/">Home</Link>
-          <Link href="/impressum">Imprint</Link>
-          <Link href="/contact">Contact</Link>
+        <footer className="sticky bottom-0 flex w-full flex-col items-center justify-center gap-4 bg-white p-8">
+          <div className="flex items-center justify-center gap-4">
+            <Link href="/">Home</Link>
+            <Link href="/impressum">Imprint</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+          <Link href="https://www.linkedin.com/in/mikael-danell">LinkedIn</Link>
         </footer>
       </body>
     </html>
