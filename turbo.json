@@ -3,6 +3,7 @@
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": [
     "NEXT_PUBLIC_\\*",
+    "FF_\\*",
     "SANITY_PERSPECTIVE",
     "SANITY_API_READ_TOKEN",
     "REVALIDATE_INTERVAL",
@@ -12,6 +13,7 @@
     "build": {
       "dependsOn": ["^build"],
       "env": [
+        "FF_\\*",
         "SANITY_PERSPECTIVE",
         "SANITY_API_READ_TOKEN",
         "REVALIDATE_INTERVAL",
