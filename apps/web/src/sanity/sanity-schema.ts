@@ -47,9 +47,9 @@ export type ImageAsset = {
   credit?: string;
 };
 
-export type Vcard = {
+export type Contact = {
   _id: string;
-  _type: "vcard";
+  _type: "contact";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -257,7 +257,7 @@ export type SanityAssetSourceData = {
 export type AllSanitySchemaTypes =
   | BlockText
   | ImageAsset
-  | Vcard
+  | Contact
   | VcardInfo
   | Impressum
   | Home

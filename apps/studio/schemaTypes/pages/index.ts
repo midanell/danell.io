@@ -1,7 +1,7 @@
 import home from "./home";
 import impressum from "./impressum";
-import vcard from "./vcard";
+import contact from "./contact";
 
-export const Pages = [home, impressum, vcard];
+export const Pages = [home, impressum, contact];
 
 export default Pages;

@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "vcard",
-  title: "VCard",
+  name: "contact",
+  title: "Contact",
   type: "document",
   fields: [
     defineField({
