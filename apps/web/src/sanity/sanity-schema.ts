@@ -53,6 +53,24 @@ export type Contact = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
+  metaTitle: string;
+  metaDescription: string;
+  metaImage: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  noindex?: boolean;
+  nofollow?: boolean;
+  keywords?: string;
+  synonyms?: string;
   title: string;
   vcard: VcardInfo;
 };
