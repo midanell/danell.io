@@ -4,6 +4,7 @@ import { REVALIDATE } from "@/sanity/server/env";
 import { sanityFetch } from "@/sanity/server/fetch";
 import Error from "@/ui/error";
 import { createMetadata, type SanitySeo } from "@/utils/metaData";
+import PortableText from "@/ui/portableText";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -27,7 +28,9 @@ export default async function ImpressumPage() {
   return (
     <div className="flex flex-col items-center justify-items-center gap-16 p-8 pb-20">
       <h1>{data.title}</h1>
-      <p>{data.description}</p>
+      <div>
+        <PortableText value={data.imprint} className="flex flex-col gap-4" />
+      </div>
     </div>
   );
 }

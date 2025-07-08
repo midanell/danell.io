@@ -30,9 +30,9 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col antialiased`}>
         <main>{children}</main>
-        <footer className="sticky bottom-0 flex items-center justify-center gap-4 p-8">
+        <footer className="sticky bottom-0 flex w-full items-center justify-center gap-4 bg-white p-8">
           <Link href="/">Home</Link>
-          <Link href="/impressum">Impressum</Link>
+          <Link href="/impressum">Imprint</Link>
         </footer>
       </body>
     </html>

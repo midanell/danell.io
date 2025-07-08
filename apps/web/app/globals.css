@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    @apply box-border h-full;
+  }
+
+  h1 {
+    @apply text-3xl text-inherit;
+  }
+
+  h2 {
+    @apply text-2xl text-inherit;
+  }
+
+  h3 {
+    @apply text-xl text-inherit;
+  }
+
+  p {
+    @apply text-inherit;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  .portable strong {
+    @apply font-medium text-inherit;
+  }
+
+  .portable h3 {
+    @apply mt-8;
+  }
+
+  .portable ul {
+    @apply flex list-disc flex-col gap-4 p-4;
+  }
+}

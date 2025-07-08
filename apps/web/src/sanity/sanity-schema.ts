@@ -13,6 +13,40 @@
  */
 
 // Source: schema.json
+export type BlockText = Array<{
+  children?: Array<{
+    marks?: Array<string>;
+    text?: string;
+    _type: "span";
+    _key: string;
+  }>;
+  style?: "normal" | "h2" | "h3";
+  listItem?: "bullet";
+  markDefs?: Array<{
+    href?: string;
+    _type: "link";
+    _key: string;
+  }>;
+  level?: number;
+  _type: "block";
+  _key: string;
+}>;
+
+export type ImageAsset = {
+  _type: "imageAsset";
+  asset?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+  };
+  media?: unknown;
+  hotspot?: SanityImageHotspot;
+  crop?: SanityImageCrop;
+  altText?: string;
+  credit?: string;
+};
+
 export type Impressum = {
   _id: string;
   _type: "impressum";
@@ -38,7 +72,7 @@ export type Impressum = {
   keywords?: string;
   synonyms?: string;
   title: string;
-  description: string;
+  imprint: BlockText;
 };
 
 export type Home = {
@@ -200,6 +234,8 @@ export type SanityAssetSourceData = {
 };
 
 export type AllSanitySchemaTypes =
+  | BlockText
+  | ImageAsset
   | Impressum
   | Home
   | MediaTag
