@@ -1,4 +1,6 @@
-import home from "./pages/home";
-import impressum from "./pages/impressum";
+import fields from "./fields";
+import pages from "./pages";
 
-export const schemaTypes = [home, impressum];
+export const Schemas = [...pages, ...fields];
+
+export default Schemas;

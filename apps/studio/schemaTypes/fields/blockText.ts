@@ -33,7 +33,6 @@ export default defineField({
               defineField({
                 name: "href",
                 type: "url",
-                description: `Use "/advise/.." for internal links`,
                 validation: (Rule) =>
                   Rule.uri({
                     allowRelative: true,

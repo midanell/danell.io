@@ -23,9 +23,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "description",
-      title: "Description",
-      type: "text",
+      name: "imprint",
+      title: "Imprint",
+      type: "blockText",
       group: "page",
       validation: (Rule) => Rule.required(),
     }),
