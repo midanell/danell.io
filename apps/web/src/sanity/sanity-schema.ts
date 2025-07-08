@@ -47,6 +47,27 @@ export type ImageAsset = {
   credit?: string;
 };
 
+export type Vcard = {
+  _id: string;
+  _type: "vcard";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  vcard: VcardInfo;
+};
+
+export type VcardInfo = {
+  _type: "vcardInfo";
+  firstName: string;
+  lastName: string;
+  organization: string;
+  title: string;
+  email: string;
+  phone: string;
+  website: string;
+};
+
 export type Impressum = {
   _id: string;
   _type: "impressum";
@@ -236,6 +257,8 @@ export type SanityAssetSourceData = {
 export type AllSanitySchemaTypes =
   | BlockText
   | ImageAsset
+  | Vcard
+  | VcardInfo
   | Impressum
   | Home
   | MediaTag
