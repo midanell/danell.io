@@ -4,6 +4,7 @@ import { visionTool } from "@sanity/vision";
 import Schemas from "./schemaTypes";
 import { media } from "sanity-plugin-media";
 import { structure } from "./structure/structure";
+import resolveNewDocumentOptions from "./newDocumentOptions";
 
 export default defineConfig({
   name: "default",
@@ -19,7 +20,9 @@ export default defineConfig({
     visionTool({ defaultApiVersion: process.env.SANITY_STUDIO_API_VERSION || "2025-07-04" }),
     media(),
   ],
-
+  document: {
+    newDocumentOptions: resolveNewDocumentOptions,
+  },
   schema: {
     types: Schemas,
   },
