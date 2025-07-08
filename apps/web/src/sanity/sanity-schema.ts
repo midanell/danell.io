@@ -19,6 +19,24 @@ export type Impressum = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
+  metaTitle: string;
+  metaDescription: string;
+  metaImage: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  noindex?: boolean;
+  nofollow?: boolean;
+  keywords?: string;
+  synonyms?: string;
   title: string;
   description: string;
 };
@@ -29,8 +47,29 @@ export type Home = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
+  metaTitle: string;
+  metaDescription: string;
+  metaImage: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  noindex?: boolean;
+  nofollow?: boolean;
+  keywords?: string;
+  synonyms?: string;
   title: string;
   description: string;
+  contactLinkText: string;
+  contactLink: string;
+  contactLinkDescription: string;
 };
 
 export type MediaTag = {

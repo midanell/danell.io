@@ -29,5 +29,27 @@ export default defineType({
       group: "page",
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      title: "Contact button label",
+      type: "string",
+      name: "contactLinkText",
+      group: "page",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      title: "Contact button link",
+      type: "url",
+      name: "contactLink",
+      group: "page",
+      validation: (Rule) =>
+        Rule.required().uri({ allowRelative: false, scheme: ["http", "https"] }),
+    }),
+    defineField({
+      title: "Contact button description",
+      type: "text",
+      name: "contactLinkDescription",
+      group: "page",
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 });
