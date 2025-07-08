@@ -15,6 +15,7 @@
     "react-dom": "^19.0.0",
     "server-only": "^0.0.1",
     "clsx": "^2.1.1",
+    "react-feather": "^2.0.10",
     "vcards-js": "^2.10.0"
   },
   "devDependencies": {
